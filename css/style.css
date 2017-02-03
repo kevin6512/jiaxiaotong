@@ -1,0 +1,124 @@
+
+/*banner*/
+#banner {
+	width: 100%;
+	height:auto;
+	overflow: hidden;
+	position:relative;
+}
+#banner .swiper-slide {
+	position:relative;
+	text-align:center;
+}
+#banner img {
+	max-width: 100%;
+}
+.gallerytitle {
+text-align: center;
+font-size: 1em;
+height: 42px;
+line-height: 42px;
+color: #fafafa;
+position: absolute;
+left: 0;
+bottom: 0;
+right: 0;
+font-weight: normal;
+text-shadow: 1px 1px 1px #000;
+/* background-color: rgba(21,20,20,0.5); */
+background-color: rgba(0,0,0,0);
+background: -moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));
+background: -webkit-gradient(linear,top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.7)));
+background: -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));
+background: -o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));
+}
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 66px;
+  text-align: center;
+  right:0;
+  width:100%;
+}
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 15px;
+  height: 5px;
+  border-radius:5px;
+  background: #fff;
+  margin: 0 2px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.swiper-pagination-bullet-active {
+  background: #ff6600;
+}
+#img 
+{
+	width:100%;
+	float:left;
+}
+#img img
+{
+	width:100%;
+	height:33rem;
+}
+.login_header
+{
+    background-color:#5cb85c ;
+    color:#fff;
+
+    width: 100%;
+}
+.login_header a
+{
+    color:#fff;
+    display: inline-block;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+}
+.login_a a
+{
+    color:#9d9d9d ;!important
+}
+.login_bg_padd
+{
+    padding: 10px;
+}
+.login_bg_border
+{
+    border: solid 1px #ddd;
+}
+.login_bg
+{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+.login_bg_img
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 80px;
+    font-size: 24px;
+    color:#5cb85c;
+    font-weight: bold;
+
+}
+.login_bg_img img
+{
+    width: 80px;
+    height: 80px;
+}
+.flex
+{
+    display: inline-flex;
+
+}

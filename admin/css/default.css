@@ -1,0 +1,171 @@
+﻿html, body { background: #fff; -ms-overflow-style: scrollbar; /*ie-scrollbar*/ overflow-x: hidden; /* Prevent scroll on narrow devices */font-family: '微软雅黑'; }
+.all { margin-top: 50px; margin-left: 220px; z-index: 20; padding-left: 0; padding-right: 0; }
+.sidebar { position: fixed; left: 0; top: 50px; width: 220px; padding: 0; background-color: #f1f1f1; -webkit-overflow-scrolling: touch; -webkit-overflow-scrolling: -blackberry-touch; border-right: 1px solid #ccc; overflow-y: auto; overflow-x: hidden; height: 100%; }
+.sidebar ul { list-style-type: none; margin: 0; padding: 0; }
+.sidebar li { border-top: 1px solid #f3f3f3; }
+.sidebar li a { color: #6d7983; }
+.sidebar li .caret { margin-top: 9px; }
+.sidebar li i { margin-right: 15px; }
+.sidebar .nav-header { padding: 10px; background-color: #f5f5f5; }
+.sidebar .nav > li[class*=active] > a { background-color: #337ab7; color: #fff; }
+.sidebar .nav > li > a { padding: 13px 15px; border-bottom: 1px solid #e5e5e5; }
+.sidebar .sub-menu { display: none; }
+.sidebar .sub-menu li:hover { background-color: #f5f5f5; }
+.sidebar .sub-menu li a { padding: 15px 30px; text-decoration: none; display: block; background-color: #fff; }
+.sidebar .sub-menu li[class*=active] > a { color: #337ab7 !important; }
+
+.maincontent { width: 100%; height: 100%; margin: 0 auto; min-width: 320px !important; overflow: hidden; }
+.maincontent .breadcrumb { padding: 14px 15px; }
+
+#goTop { padding: 5px 15px; border-radius: 8px; position: fixed; right: 20px; bottom: 20px; display: none; background-color: #aaa; color: #fff; text-align: center; display: none; -moz-transition: background 0.5s linear; -webkit-transition: background 0.5s linear; -o-transition: background 0.5s linear; transition: background 0.5s linear; z-index: 99; }
+#goTop:hover { background: #808080; }
+
+@media (max-width:768px) {
+    .navbar-toggle[class*=pull-left] { margin-left: 15px; margin-right: 0; }
+    #goTop { padding: 0 8px; }
+}
+@media (min-width:768px) {
+    .col-sm-1 {
+         width: auto;
+    }
+}
+
+.forkme { position: absolute; top: 50px; right: 0; border: 0; }
+/*fa字体库样式纠正，注意写法，中间是没有间隔的*/
+.fa.pull-right { line-height: inherit; }
+.recipient-name{color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    height: 30px;
+    line-height:30px;
+    width: 50%;
+}
+.recipient-time{color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    height: 30px;
+    line-height:30px;
+    width: 100%;
+}
+.recipient-area{color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    width: 80%;
+}
+.recipient-car{color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    height: 30px;
+    line-height:30px;
+    width: 80%;
+}
+.modal_hidden
+{
+    height:400px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+.notice
+{
+    text-align: center;
+    background-color: #337ab7;
+    margin-top: 20px;
+    margin-right: 15px;
+    line-height: 35px;
+    color: #fff;
+}
+.notice a
+{
+    color: #fff;
+
+}
+.notice_hide
+{
+    display: none;
+}
+.panel-default
+{
+    white-space: normal !important;
+}
+.little{width: 20%;}
+.big{width: 100%;}
+/*微点评*/
+.com_dianp
+{
+    text-align: center;
+}
+.micro_ico img
+{
+    width: 40px;
+}
+
+.bg_record
+{
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.label_record span
+{
+    width: 30px;
+    float: left;
+}
+.label_record span img
+{
+    width: 100%;
+}
+.flex
+{
+    box-sizing: border-box;
+    -ms-flex: 1;
+    flex: 1;
+    display: -ms-flexbox;
+    display: flex;
+}
+.person_add
+{
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+
+}
+.form-control-label {
+    text-align: right;
+    font-weight: 400;
+    color: #999;
+    line-height: 30px;
+}
+.well-header
+{
+    background-color: #f4f5f9;
+    border: 1px solid #ebebeb;
+    border-bottom: 0;
+    padding: .9375rem 1.5625rem;
+}
+.text_indent
+{
+    text-indent: 16px;
+}
+.bar-legend li span {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.bar-legend {
+    list-style: none;
+}

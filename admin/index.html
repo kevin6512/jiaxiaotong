@@ -1,0 +1,532 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <link rel="icon" href="favicon.ico" />
+    <!--jquery库-->
+    <script src="js/jquery.min.js"></script>
+    <!--bootstrap库-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/bootstrap/html5shiv.min.js"></script>
+      <script src="js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+    <!--font-awesome字体库-->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!--页面加载进度条-->
+    <link href="css/pace/dataurl.css" rel="stylesheet" />
+    <script src="js/pace/pace.min.js"></script>
+    <!--jquery.hammer手势插件-->
+    <script src="js/jquery.hammer/hammer.min.js"></script>
+    <script src="js/jquery.hammer/jquery.hammer.js"></script>
+    <!--平滑滚动到顶部库-->
+    <script src="js/jquery.scrolltopcontrol/scrolltopcontrol.js" type="text/javascript"></script>
+    <!--主要写的jquery拓展方法-->
+    <script src="js/jquery.extend.js" type="text/javascript"></script>
+    <!--主要写的css代码-->
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
+    <!--主要写的js代码-->
+    <script src="js/default.js" type="text/javascript"></script>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/adminlet/AdminLTE.min.css">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle show pull-left" data-target="sidebar">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">祝博士家校通</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="label label-warning">10</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 10 notifications</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                        page and may cause design problems
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-red"></i> 5 new members joined
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-light-blue"></i> You changed your username
+                                    </a>
+                                </li>
+                            </ul><div class="slimScrollBar" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 195.122px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                        </li>
+                        <li class="footer"><a href="#">View all</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-expanded="false"><i class="fa fa-user fa-fw"></i>&nbsp;小王&nbsp;<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="top-right1.html">个人资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>&nbsp;退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container-fluid all">
+        <div class="sidebar">
+            <ul class="nav">
+                <li>
+                    <p style="width: 50%;margin: 10px auto 0;"><img src="image/logo.jpg" class="img-responsive img-circle" style="border:solid 5px #fff;" /></p>
+                    <h5 style="text-align: center">祝博士教育学院</h5>
+                </li>
+                <li class="has-sub active">
+                    <a href="javascript:void(0);"><span>常用功能</span><i class="fa fa-caret-down fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="notice.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;信息发送</a></li>
+                        <li><a href="class_setting.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;班级管理</a></li>
+                        <li><a href="student_setting.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;学生管理</a></li>
+                        <li><a href="parent_setting.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;家长管理</a></li>
+                        <li><a href="teacher_setting.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;老师管理</a></li>
+                        <li><a href="admin_setting.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;管理员设置</a></li>
+                        <li><a href="fan_management.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;粉丝管理</a></li>
+                        <li><a href="schoolcar_setting.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;校卡管理</a></li>
+                        <li><a href="attendance.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;考勤统计</a></li>
+                        <li><a href="#"><i class="fa fa-github-alt fa-fw"></i>&nbsp;网页管理</a></li>
+                        <li><a href="enrollment_enroll.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;报名管理</a></li>
+                        <li><a href="enrollment.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;微信招生</a></li>
+                        <li><a href="task_reminds.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;任务提醒</a></li>
+                        <li><a href="audit.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;信息审核</a></li>
+                        <li><a href="login.html"><i class="fa fa-github-alt fa-fw"></i>&nbsp;退出</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:void(0);"><span>公众号</span><i class="fa fa-caret-down fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="public_access.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;公众号接入</a></li>
+                        <li><a href="concern_reply.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;关注回复</a></li>
+                        <li><a href="registration_reply.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;注册回复</a></li>
+                        <li><a href="keyword_reply.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;关键字回复</a></li>
+                        <li><a href="wechat_group.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;微信群发</a></li>
+                        <li><a href="fan_management.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;粉丝管理</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:void(0);"><span>微学校</span><i class="fa fa-caret-down fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="information.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;基本信息</a></li>
+                        <li><a href="class_setting.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;班级设置</a></li>
+                        <li><a href="student_setting.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;学生管理</a></li>
+                        <li><a href="parent_setting.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;家长管理</a></li>
+                        <li><a href="teacher_setting.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;老师管理</a></li>
+                        <li><a href="admin_setting.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;管理员设置</a></li>
+                        <li><a href="schoolcar_setting.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;校卡管理</a></li>
+                        <li><a href="lower_setting.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;下级分校</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:void(0);"><span>微教学</span><i class="fa fa-caret-down fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="notice.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;微通知</a></li>
+                        <li><a href="attendance.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;微考勤</a></li>
+                        <li><a href="micro_comment.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;微点评</a></li>
+                        <li><a href="schedule.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;微课表</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:void(0);"><span>设备管理</span><i class="fa fa-caret-down fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="advertising_management.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;广告管理</a></li>
+                        <li><a href="shuaka_manage.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;刷卡机管理</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:void(0);"><span>权限管理</span><i class="fa fa-caret-down fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="personnel_manage.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;人员管理</a></li>
+                        <li><a href="role_manage.html"><i class="fa fa-graduation-cap fa-fw"></i>&nbsp;角色管理</a></li>
+                    </ul>
+                </li>
+                <script>
+                    $(function(){
+                        $('.has-sub').click(function(){
+                            if($(this).find('i.fa-caret-down').hasClass('fa-caret-down')){
+                                $(this).find('i.fa-caret-down').attr('class','fa fa-caret-up fa-fw pull-right')
+                            }
+                            else
+                            {
+                                $(this).find('i.fa-caret-up').attr('class','fa fa-caret-down fa-fw pull-right')
+                            }
+                        })
+                    })
+                </script>
+            </ul>
+        </div>
+        <div class="maincontent row">
+            <!--我是主要内容 start-->
+            <ul class="breadcrumb">
+                <li class="active">首页</li>
+            </ul>
+            <div class="col-sm-12">
+                <!-- Small boxes (Stat box) -->
+                <div class="row">
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-blue">
+                            <div class="inner">
+                                <h3>150</h3>
+
+                                <p>班级数量</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-ios-people"></i>
+                            </div>
+                            <a href="class_setting.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-green">
+                            <div class="inner">
+                                <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                                <p>教师数量</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-person-stalker"></i>
+                            </div>
+                            <a href="teacher_setting.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-yellow">
+                            <div class="inner">
+                                <h3>44</h3>
+
+                                <p>学生数量</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-person-add"></i>
+                            </div>
+                            <a href="student_setting.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-red">
+                            <div class="inner">
+                                <h3>65</h3>
+
+                                <p>管理员数量</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-pie-graph"></i>
+                            </div>
+                            <a href="admin_setting.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                </div>
+
+            </div>
+
+            <div class="col-sm-12">
+                <section class="content">
+                    <div class="row">
+
+                        <!-- /.col (LEFT) -->
+                        <div class="col-md-6">
+
+
+                            <!-- BAR CHART -->
+                            <div class="box box-success">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">月度缴费学员</h3>
+
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <div class="chart">
+                                        <canvas id="barChart" style="height:230px"></canvas>
+                                        <div id="legend"></div>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                            <!-- DONUT CHART -->
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">系统信息</h3>
+
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer no-padding">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li><a href="#">运行环境：WINNT Microsoft-IIS/7.5 PHP版本:5.2.4</a></li>
+                                        <li><a href="#">PHP运行方式：isapi</a></li>
+                                        <li><a href="#">MYSQL版本：5.1.73-community</a></li>
+                                        <li><a href="#">上传附件限制：400M</a></li>
+                                        <li><a href="#">执行时间限制：300秒</a></li>
+                                        <li><a href="#">剩余空间：46917.84M</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.col (RIGHT) -->
+                        <div class="col-md-6">
+
+                            <!-- DONUT CHART -->
+                            <div class="box box-danger">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">数量占比</h3>
+
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="chart-responsive">
+                                                <canvas id="pieChart" height="150"></canvas>
+                                            </div>
+                                            <!-- ./chart-responsive -->
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-md-4">
+                                            <ul class="chart-legend clearfix">
+                                                <li><i class="fa fa-circle-o text-red"></i> 班级数量</li>
+                                                <li><i class="fa fa-circle-o text-green"></i> 教师数量</li>
+                                                <li><i class="fa fa-circle-o text-yellow"></i> 学生数量</li>
+                                                <li><i class="fa fa-circle-o text-aqua"></i> 家长数量</li>
+                                                <li><i class="fa fa-circle-o text-light-blue"></i> 管理员数量</li>
+                                            </ul>
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer no-padding">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li><a href="#">班级数量
+                                            <span class="pull-right text-red"><i class="fa fa-angle-right"></i> 700</span></a></li>
+                                        <li><a href="#">教师数量 <span class="pull-right text-green"><i class="fa fa-angle-right"></i> 500</span></a>
+                                        </li>
+                                        <li><a href="#">学生数量
+                                            <span class="pull-right text-yellow"><i class="fa fa-angle-right"></i> 400</span></a></li>
+                                        <li><a href="#">家长数量
+                                            <span class="pull-right text-aqua"><i class="fa fa-angle-right"></i> 600</span></a></li>
+                                        <li><a href="#">管理员数量
+                                            <span class="pull-right text-blue"><i class="fa fa-angle-right"></i> 300</span></a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                </section>
+
+            </div>
+
+            <!-- ChartJS 1.0.1 -->
+            <script src="js/chartjs/Chart.min.js"></script>
+            <!-- FastClick -->
+            <script src="js/fastclick/fastclick.js"></script>
+            <!-- AdminLTE App -->
+            <script src="js/app.min.js"></script>
+            <!-- page script -->
+            <script>
+                $(function () {
+                    /* ChartJS
+                     * -------
+                     * Here we will create a few charts using ChartJS
+                     */
+
+
+
+
+                    //-------------
+                    //- PIE CHART -
+                    //-------------
+                    // Get context with jQuery - using jQuery's .get() method.
+                    var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
+                    var pieChart = new Chart(pieChartCanvas);
+                    var PieData = [
+                        {
+                            value: 700,
+                            color: "#f56954",
+                            highlight: "#f56954",
+                            label: "班级数量"
+                        },
+                        {
+                            value: 500,
+                            color: "#00a65a",
+                            highlight: "#00a65a",
+                            label: "教师数量"
+                        },
+                        {
+                            value: 400,
+                            color: "#f39c12",
+                            highlight: "#f39c12",
+                            label: "学生数量"
+                        },
+                        {
+                            value: 600,
+                            color: "#00c0ef",
+                            highlight: "#00c0ef",
+                            label: "家长数量"
+                        },
+                        {
+                            value: 300,
+                            color: "#3c8dbc",
+                            highlight: "#3c8dbc",
+                            label: "管理员数量"
+                        }
+                    ];
+                    var pieOptions = {
+                        //Boolean - Whether we should show a stroke on each segment
+                        segmentShowStroke: true,
+                        //String - The colour of each segment stroke
+                        segmentStrokeColor: "#fff",
+                        //Number - The width of each segment stroke
+                        segmentStrokeWidth: 2,
+                        //Number - The percentage of the chart that we cut out of the middle
+                        percentageInnerCutout: 50, // This is 0 for Pie charts
+                        //Number - Amount of animation steps
+                        animationSteps: 100,
+                        //String - Animation easing effect
+                        animationEasing: "easeOutBounce",
+                        //Boolean - Whether we animate the rotation of the Doughnut
+                        animateRotate: true,
+                        //Boolean - Whether we animate scaling the Doughnut from the centre
+                        animateScale: true,
+                        //Boolean - whether to make the chart responsive to window resizing
+                        responsive: true,
+                        // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+                        maintainAspectRatio: true,
+                        //String - A legend template
+                        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+                    };
+                    //Create pie or douhnut chart
+                    // You can switch between pie and douhnut using the method below.
+                    pieChart.Doughnut(PieData, pieOptions);
+
+                    //-------------
+                    //- BAR CHART -
+                    //-------------
+                    // 柱状图数据
+                    var chartData = {
+                        // x轴显示的label
+                        labels:['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                        datasets:[
+
+                            {
+                                fillColor:'#00a65a',// 填充色
+                                data:[60, 70, 80, 56, 40, 90, 58,8,9,10,11,12], // 数据
+                                label:'缴费学员' // 图例
+                            }
+                        ]
+                    };
+                    // 柱状图选项设置
+                    var configs  = {
+                        //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+                        scaleBeginAtZero: true,
+                        //Boolean - Whether grid lines are shown across the chart
+                        scaleShowGridLines: true,
+                        //String - Colour of the grid lines
+                        scaleGridLineColor: "rgba(0,0,0,.05)",
+                        //Number - Width of the grid lines
+                        scaleGridLineWidth: 1,
+                        //Boolean - Whether to show horizontal lines (except X axis)
+                        scaleShowHorizontalLines: true,
+                        //Boolean - Whether to show vertical lines (except Y axis)
+                        scaleShowVerticalLines: true,
+                        //Boolean - If there is a stroke on each bar
+                        barShowStroke: true,
+                        //Number - Pixel width of the bar stroke
+                        barStrokeWidth: 2,
+                        //Number - Spacing between each of the X value sets
+                        barValueSpacing: 5,
+                        //Number - Spacing between data sets within X values
+                        barDatasetSpacing: 1,
+                        //String - A legend template
+                        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+                        //Boolean - whether to make the chart responsive
+                        responsive: true,
+                        maintainAspectRatio: true
+                    };
+
+                    // 开始绘制柱状图
+                    var ctx = document.getElementById('barChart').getContext('2d');
+                    var bar = new Chart(ctx).Bar(chartData, configs);
+                    var legend = document.getElementById('legend');
+                    // 图例
+                    legend.innerHTML = bar.generateLegend();
+                });
+            </script>
+            <!--我是主要内容 end-->
+        </div>
+    </div>
+    <a href="#top" id="goTop"><i class="fa fa-angle-up fa-3x"></i></a>
+    <a href="https://github.com/shihao316558512">
+        <img class="forkme" src="image/forkme.png" alt="Fork me on GitHub">
+    </a>
+</body>
+</html>

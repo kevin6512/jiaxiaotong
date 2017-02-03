@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--页面加载进度条-->
+    <link href="css/pace/dataurl.css" rel="stylesheet" />
+    <script src="js/pace/pace.min.js"></script>
+    <!--主要自己写的css代码-->
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
+    <!--主要写的js代码-->
+    <script src="js/default.js" type="text/javascript"></script>
+    <!--右侧js代码-->
+    <script src="js/default_right.js" type="text/javascript"></script>
+    <!--轮播图-->
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!--批量选择图片-->
+    <link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="js/fileinput.js" type="text/javascript"></script>
+    <script src="js/fileinput.js" type="text/javascript"></script>
+    <script src="js/fileinput_locale_zh.js" type="text/javascript"></script>
+    <title>表单和图片</title>
+</head>
+<body >
+<!--背景用于右侧栏目-->
+<div id="bg">
+
+</div>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column" style="padding-right: 0;padding-left: 0;">
+
+            <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle show pull-left" data-target="sidebar">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">个人空间</a>
+                    <a href="javascript:void(0)" class="navbar-brand glyphicon glyphicon-th-large pull-right browsing_right" ></a>
+                </div>
+
+            </nav>
+            <!--右侧滑动菜单-->
+            <div class="sidebar1" id="example-navbar-collapse1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <p style="width: 50%;margin: 10px auto 0;"><img src="images/jyt.jpg" class="img-responsive img-circle" style="border:solid 5px #fff;" /></p>
+                        <h5 style="text-align: center;color:#fff;">ID:4434</h5>
+                    </li>
+                    <li class="blue"><a href="business_card.html" class="browsing_add_info" ><span class="glyphicon glyphicon-home"></span> 默认名片</a></li>
+                    <li class="orange" ><a href="change_account.html"><span class="glyphicon glyphicon-plus-sign"></span> 更改账户</a></li>
+
+                </ul>
+            </div>
+            <div class="container-fluid all" >
+            <!--左侧滑动菜单-->
+            <div class="sidebar" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                       <p style="width: 50%;margin: 10px auto 0;"><img src="images/logo.jpg" class="img-responsive img-circle" style="border:solid 5px #fff;" /></p>
+                        <h5 style="text-align: center">祝博士教育学院</h5>
+                    </li>
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+                    <li ><a href="school_profile.html"><span class="glyphicon glyphicon-plus-sign"></span> 学校简介</a></li>
+                    <li ><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> 才艺宝宝</a></li>
+                    <li ><a href="garden_meal.html"><span class="glyphicon glyphicon-plus-sign"></span> 园餐快递</a></li>
+                    <li ><a href="school_photo.html"><span class="glyphicon glyphicon-plus-sign"></span> 学校相册</a></li>
+                    <li ><a href="browsing_info.html"><span class="glyphicon glyphicon-plus-sign"></span> 班级空间</a></li>
+                    <li ><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> 成长听吧</a></li>
+                    <li ><a href="online_registration.html"><span class="glyphicon glyphicon-plus-sign"></span> 在线报名</a></li>
+                    <li ><a href="contact_us.html"><span class="glyphicon glyphicon-plus-sign"></span> 联系我们</a></li>
+                    <li ><a href="personal_center_login.html"><span class="glyphicon glyphicon-plus-sign"></span> 个人中心</a></li>
+                </ul>
+            </div>
+                <form>
+                <!--主体内容-->
+            <div class="maincontent row" id="aa">
+                <div class="container browsing_add">
+                    <div class="col-xs-12 xinwen_bg " style="margin-bottom: 10px;padding-top: 10px;">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="这里输入需要发布的文字信息"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input id="file-1" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="2">
+                        </div>
+                        <script>
+
+                            $("#file-1").fileinput({
+                                language: 'zh', //设置语言
+                                uploadUrl: '#', // 上传的地址
+                                allowedFileExtensions : ['jpg', 'png','gif'],//接收的文件后缀
+                                overwriteInitial: false,
+                                maxFileSize: 10000,
+                                maxFilesNum: 10,
+                                //allowedFileTypes: ['image', 'video', 'flash'],
+                                slugCallback: function(filename) {
+                                    return filename.replace('(', '_').replace(']', '_');
+                                }
+                            });
+
+                        </script>
+
+                        <div class="form-group">
+                            <input type="submit" class="form-control btn-primary" value="保存"  />
+                        </div>
+                    </div>
+                </div>
+                <!--老师发布-->
+
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active" style="width: 33%;text-align: center">
+                            <a href="#Inbox" data-toggle="tab" class="glyphicon glyphicon-user"> 个人微博</a>
+                        </li>
+                        <li  style="width: 33%;text-align: center">
+                            <a href="#Sending_box" data-toggle="tab" class="glyphicon glyphicon-user"> 个人相册</a>
+                        </li>
+                        <li  style="width: 34%;text-align: center">
+                            <a href="#sent" data-toggle="tab" class="glyphicon glyphicon-th"> 应用中心</a>
+                        </li>
+                    </ul>
+
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="Inbox">
+                            <!--个人微博-->
+                            <div class="container">
+                                <div class="col-xs-12 xinwen_bg">
+                                    <ul>
+                                        <li >
+                                            <a href="school_notice_detail.html" class="ping_img">
+                                                <img src="1.jpg"/>
+                                            </a>
+                                            <h3>
+                                               学校管理员
+                                            </h3>
+                                            <p>2016-11-18 10:47:51</p>
+                                            <div class="mess_con">
+                                                你好，测试
+                                                你好，测试
+                                                你好，测试
+                                                你好，测试
+                                                <img src="images/jyt.jpg" />
+                                            </div>
+
+                                        </li>
+
+                                        <div class="pinglun">
+                                            <span class="text_reply">
+                                                <a href="#" data-toggle="modal" data-target=".bs-example-reply">回复</a>
+                                            </span>
+
+                                            <span class="text_zan">
+                                                <a href="#" data-toggle="modal" data-target=".bs-example-zhuanfa">转发</a>
+                                            </span>
+                                            <span class="text_share">
+                                                <a href="#">删除</a>
+                                            </span>
+                                            <span class="text_context">
+                                                <a href="#" data-toggle="modal" data-target=".bs-example-context">描述</a>
+                                            </span>
+
+                                        </div>
+
+                                        <div class="pinglunqu">
+                                            <p>小俊家长:<a href="#">你是你是你是你是你是你是谁呢你是水泥</a>(2016-11-15 11:40:25)</p>
+                                            <p>小俊家长:<a href="#">你是你是你是你是你是你是谁呢你是水泥</a>(2016-11-15 11:40:25)</p>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="col-xs-12 xinwen_bg">
+                                    <ul>
+                                        <li >
+                                            <a href="school_notice_detail.html" class="ping_img">
+                                                <img src="1.jpg"/>
+                                            </a>
+                                            <h3>
+                                                学校管理员
+                                            </h3>
+                                            <p>2016-11-18 10:47:51</p>
+                                            <div class="mess_con">
+                                                你好，测试
+                                                你好，测试
+                                                你好，测试
+                                                你好，测试
+                                                <img src="images/jyt.jpg" />
+                                            </div>
+
+                                        </li>
+
+                                        <div class="pinglun">
+                                            <span class="text_reply">
+                                                <a href="#" data-toggle="modal" data-target=".bs-example-reply">回复</a>
+                                            </span>
+
+                                            <span class="text_zan">
+                                                <a href="#" data-toggle="modal" data-target=".bs-example-zhuanfa">转发</a>
+                                            </span>
+                                            <span class="text_share">
+                                                <a href="#">删除</a>
+                                            </span>
+                                            <span class="text_context">
+                                                <a href="#" data-toggle="modal" data-target=".bs-example-context">描述</a>
+                                            </span>
+
+                                        </div>
+
+                                        <div class="pinglunqu">
+                                            <p>小俊家长:<a href="#">你是你是你是你是你是你是谁呢你是水泥</a>(2016-11-15 11:40:25)</p>
+                                            <p>小俊家长:<a href="#">你是你是你是你是你是你是谁呢你是水泥</a>(2016-11-15 11:40:25)</p>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--回复-->
+
+                            <div class="modal fade bs-example-reply" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">回复</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                                        <textarea class="form-control" rows="3">
+
+                                                        </textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                            <button type="submit" class="btn btn-primary">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--转发-->
+
+                            <div class="modal fade bs-example-zhuanfa" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title" >转发</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <select class="form-control">
+                                                <option>请选择发布班级</option>
+                                                <option>小一班</option>
+                                                <option>大一班</option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                            <button type="submit" class="btn btn-primary">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--描述-->
+
+                            <div class="modal fade bs-example-context" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title" >描述</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                                        <textarea class="form-control" rows="3">
+
+                                                        </textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                            <button type="submit" class="btn btn-primary">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container" style="margin-top: 10px;">
+
+                                    <a href="#" class="btn btn-default btn-block">更多信息</a>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Sending_box">
+
+                                <!--个人相册-->
+                            <div class="container">
+                                <div class="col-xs-12 xinwen_bg">
+                                    <ul>
+                                        <li >
+                                            <a href="personal_space_phone.html" class="ping_img">
+                                                <img src="1.jpg"/>
+                                            </a>
+                                            <h3>
+                                                <a href="personal_space_phone.html"> 2016-11-18 </a>
+                                                <span class="glyphicon glyphicon-chevron-right" style="float:right;"></span>
+                                            </h3>
+                                            <p>共1张照片</p>
+
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--描述-->
+
+                            <div class="modal fade bs-example-context1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title" >描述</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                                        <textarea class="form-control" rows="3">
+
+                                                        </textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                            <button type="submit" class="btn btn-primary">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container" style="margin-top: 10px;">
+
+                                <a href="#" class="btn btn-default btn-block">更多信息</a>
+
+                            </div>
+                        </div>
+                        <!--班级应用-->
+                        <div class="tab-pane fade" id="sent">
+                            <div class="container kv-main">
+                                <div class="col-xs-12 xinwen_bg_detail" style="padding-top: 20px;padding-bottom: 20px;">
+                                    暂时没有班级应用
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!--发送信息索引-->
+                <script>
+                    $(function () {
+                        $('#myTab li:eq(0) a').tab('show');
+                    });
+                </script>
+
+
+                <!--绝对定位-->
+                <div class="add_info browsing_add_info">
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                </div>
+                <!--尾部-->
+                <div class="footer">
+                    @平台支持:祝博士微信家校通
+                </div>
+
+            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
